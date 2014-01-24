@@ -25,7 +25,7 @@ a {
     margin: auto;
     width: 1070px;
     text-align: left;
-    height: 500px;
+    height: 550px;
 }
 .header {
     font-size: 54px;
@@ -49,7 +49,7 @@ a {
     opacity: 0.8;
 }
 .disclaimer {
-    margin: 35px auto;
+    margin: 20px auto;
     width: 975px;
     height: 140px;
     text-align: justify;
@@ -68,7 +68,7 @@ a {
     margin-left: 22pt; /*changed*/
 }
 .prize img{
-    height: 350px;
+    height: 400px;
 }
 .interaction {
     border: 1px solid #DBDBDB;
@@ -76,7 +76,7 @@ a {
     float: right;
     margin-right: 32pt; /*changed*/
     position: relative;
-    top: 15px; /*50px;*/
+    top: 45px; /*50px;*/
     width: 431px;
     height: 305px;
     background: #DCCCB3;
