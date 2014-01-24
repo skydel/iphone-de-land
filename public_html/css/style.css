@@ -232,6 +232,9 @@ a {
 .French{
     display: none;
 }
+#resp{
+    display:none;
+}
 .confirmKeyword, .confirmShortcode {
   color: #FF0000;
   font-size: 90px;
