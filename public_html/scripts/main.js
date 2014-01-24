@@ -124,10 +124,12 @@ function langSelector(){
     var userLang = navigator.language || navigator.userLanguage;
     if(userLang=='fr'||userLang=='fr-BE'||userLang=='fr-CA'||userLang=='fr-FR'||userLang=='fr-LU'||userLang=='fr-MC'||userLang=='fr-CH'){
         displayFrench();
+        document.title = "GAGNER le tout nouveau iPhone 5s!";
         //alert(userLang);
     }
     else{
         displayGerman();
+        document.title = "Gewinne das neue iPhone 5s!.";
         //alert(userLang);
     }
 }
