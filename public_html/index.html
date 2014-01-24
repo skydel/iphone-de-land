@@ -5,172 +5,231 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/resp-style.css" />
+        <link rel="stylesheet" type="text/css" href="css/resp-style.css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/main.js"></script>
     </head>
     <body>
-	<div id="quest">
-        <div class="wrapper">
-            <div class="header">
-                <img src="images/top-iphone.png" />
-                <br>
-                Gewinne das neue
-                <img src="images/iPhone5s.png" class="image-icon"/>
-            </div>
-            <div class="under-line"></div>
-            
-            <div class="mainContent">
-            <div class="prize">
-                <img src="images/prize.jpg" />
-            </div>
-            <div class="interaction">
-				<input type="hidden" id="session" value="UNIQUE_SESSION_ID">
-			
-                <div id="question" class="panel">
-                    <div class="question">
-                        Kto wynalazł iPhone'a?
-                    </div>
-                    <button id="ans1" class="answer" onclick="correctAnswer();" type="button">Steve Jobs</button>
-                    <div id="message" style="position: absolute; top: 200px; font-size: 70pt; color: rgb(255, 0, 0); margin-left: 170px; display: none;"></div>
-                    <button id="ans2" class="answer" onclick="incorrectAnswer();" type="button">Bill Gates</button>
+        <div id="quest">
+            <div class="wrapper">
+                <div class="header">
+                    <img src="images/top-iphone.png" />
+                    <br>
+                    Gewinne das neue
+                    <img src="images/iPhone5s.png" class="image-icon"/>
                 </div>
+                <div class="under-line"></div>
 
-                <div id="number" class="panel">
-                    <div class="chance_text">
-                        Podaj swój numer telefonu, aby miec szanse na wygranie nowego iPhone‘a 5S!
+                <div class="mainContent">
+                    <div class="prize">
+                        <img src="images/prize.jpg" />
                     </div>
-                    <div align="center">
-                        <input id="phoneNumber" class="" type="text" value=""></input>
-                        <div class="styled-select">
-                            <select class="validate" onChange="arroW();" id="operator">
-                                <option selected="selected" value="0">Wybierz swojego operatora</option>
-								<option value="26003">Orange</option>
-								<option value="26001">Plus</option>
-								<option value="26002">T-Mobile</option>
-								<option value="26006">Play</option>
-                            </select>
+                    <div class="interaction">
+                        <input type="hidden" id="session" value="UNIQUE_SESSION_ID">
+
+                        <div id="question" class="panel">
+                            <div class="question">
+                                Kto wynalazł iPhone'a?
+                            </div>
+                            <button id="ans1" class="answer" onclick="correctAnswer();" type="button">Steve Jobs</button>
+                            <div id="message" style="position: absolute; top: 200px; font-size: 70pt; color: rgb(255, 0, 0); margin-left: 170px; display: none;"></div>
+                            <button id="ans2" class="answer" onclick="incorrectAnswer();" type="button">Bill Gates</button>
                         </div>
-                        <br>
-                        <button id="continue_number" class="continue" onclick="level2();" type="button">DALEJ</button>
-                        <br>
-                        <div class="legal3"></div>
+
+                        <div id="number" class="panel">
+                            <div class="chance_text">
+                                Podaj swój numer telefonu, aby miec szanse na wygranie nowego iPhone‘a 5S!
+                            </div>
+                            <div align="center">
+                                <input id="phoneNumber" class="" type="text" value=""></input>
+                                <div class="styled-select">
+                                    <select class="validate" onChange="arroW();" id="operator">
+                                        <option selected="selected" value="0">Wybierz swojego operatora</option>
+                                        <option value="26003">Orange</option>
+                                        <option value="26001">Plus</option>
+                                        <option value="26002">T-Mobile</option>
+                                        <option value="26006">Play</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <button id="continue_number" class="continue" onclick="level2();" type="button">DALEJ</button>
+                                <br>
+                                <div class="legal3"></div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div class="panel" id="pin">
+                            <div class="message">
+                                Wyslalismy wiadomosc z unikalnym kodem. Wprowadz ten kod tutaj i WYGRAJ!
+                            </div>
+                            <div align="center">
+                                <div class="styled-select">
+                                    <input class="" id="uniquePin" type="text" value="" maxlength="6" name="uniquePin">
+                                    <br>
+
+                                </div> <!--FORM END -->
+                                <br>
+                                <button id="continue_number" class="continue" onclick="level3();" type="button">DALEJ</button>
+                                <div class="legal2"></div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <!--br><br>
+                <img src="images/bottom.jpg" /-->
+            </div>
+            <div class="disclaimer" id="disclaimerGerman">
+                <p style="text-align: center;">
+                    <span style="font-weight: bold;">Kostet CHF 30,- (TTC) pro Teilnahme!</span>
+                    <br>
+                    Dieses Quiz beginnt am 1. Dezember 2013 00:00 CET  und endet am 28. Februar 2014 23:59 CET. <br><br>Sie können am SMSQuest Quiz teilnehmen indem Sie Ihre Handynummer in dem dafür versehenem Feld auf unserer Website angeben. Sie werden erst eine Nachricht von dem Shortcode 345 erhalten, welche mit dem Kennwort OK von Ihnen bestätigt werden muss. Teilnahmekosten sind CHF 30 (inkl. MwSt.) pro Teilnahme-runde (+ SMS/Datengebühren Deines Handyanbieters). Jedes Mal, wenn Sie Ihre Teilnahme an einer Runde bestätigen, erhalten Sie von uns eine weitere Nachricht mit einer persönlichen Kennnummer welche Ihnen den Zutritt zu der jeweiliger Fragerunde ermöglicht. Diese Fragen können in einer bestimmten Zeitspanne online beantwortet werden. Sie können zu einem Maximum von 12 mal teilnehmen (oder bis Sie alle Fragen in einer Teilnahme-runde richtig beantwortet haben).
+                    <br>
+                    <br>
+
+                    SMSQuest ist kein Abo Dienst sondern ein Wissensspiel, welches die Beantwortung von Fragen voraussetzt. Der Spieler mit den meisten richtigen Antworten in einer Fragerunde  ist der Gewinner. In dem Fall dass am Ende der Quizperiode mehrere Teilnehmer das gleiche Ergebnis erzielt haben, werden diese per SMS zu einer weiteren Fragerunde (ohne zusätzliche Kosten) eingeladen um somit eine Gewinner zu bestimmen. Es wird nur ein Preis vergeben. Minderjährigen ist die Teilnahme an dem Quiz nicht erlaubt, es liegt eine Erlaubnis der Eltern oder Erziehungsberechtigten vor.
+                    <br>
+                    <br>
+                    Anbieter: SMSQuest, P.O. Box 8196, 3503RD, Utrecht, Niederlande. Weitere Infos unter 044 581 69 84 oder E-Mail an smsquest@smsquest.com. Bitte lesen Sie sorgfältig die <a href="/info/siteterms" target="_blank">Allgemeine Geschäftsbedingungen</a> und <a href="/page/oneoffquiz" target="_blank">Teilnahmebedingungen </a> durch. 
+                </p>      
+                <br>
+                <div style="text-align: center; margin-bottom: 20px;">  
+                    <a href='/info/siteterms'>Allgemeine Geschäftsbedingungen</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='/page/privacy'>Datenschutzerklärung</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href='/info/contact'>Kontakt</a>
+                </div>
+                <br>
+                <br>
+            </div>
+            <div class="disclaimer" id="disclaimerFrench" style="display: none;">
+                <p style="text-align: center;">
+
+                    <span style="font-weight: bold;">Les frais de participation sont de 30 CHF  par tour!</span>
+                    <br>
+                    Ce quizz commence le 1er Decembre 2013 00:00 heure et se termine le 28 Fevrier 2014 23:59 heure.
+                    <br>
+                    <br>
+                    Vous pouvez participer quizz SMSQuest en soumettant votre numéro de 
+                    téléphone portable dans le champ prévu sur notre page. Vous recevrez 
+                    d'abord un message du numéro court 345 à laquelle vous devez répondre 
+                    par OK pour confirmer votre participation. Les frais de participation 
+                    sont de 30 CHF (TTC) par tour (+ coût des SMS/données sur votre 
+                    téléphone). Chaque fois que vous confirmé votre participation à un 
+                    nouveau tour, vous recevrez un SMS avec un code personnel qui vous 
+                    donnera au prochain tour de questions auxquelles on doit répondre en 
+                    ligne dans un laps de temps limité. Vous pouvez participer jusqu'à un 
+                    maximum de 12 tours (ou jusqu'à ce que vous ayez répondu à toutes les 
+                    questions dans un tour de qualification correctement).
+                    <br>
+                    <br>
+
+                    SMSQuest n'est pas un service d'abonnement mais un quizz basée sur la 
+                    connaissance pour lequel vous devez répondre a des questions. Le 
+                    participant avec le plus grand nombre de bonnes réponses fournies dans 
+                    un tour sera le gagnant. Dans le cas où, à la fin de la période de quizz
+                    plusieurs participants ont généré le même résultat, ceux-ci seront 
+                    invités à participer par SMS (sans frais supplémentaires) a une finale 
+                    pour déterminer le vainqueur. Un seul prix sera décerné. Les mineurs ne 
+                    sont pas autorisés à participer à moins d'avoir l'autorisation de leurs 
+                    parents ou du titulaire du compte. Les frais seront facturés sur votre 
+                    compte mobile ou déduits de votre solde.
+                    <br>
+                    <br>
+                    Fournisseur: SMSQuest, P.O. Box 8196, 3503RD, Utrecht, Pays-Bas. Pour 
+                    plus de renseignements, appelez le 044 581 69 84 ou contactez-nous par 
+                    email smsquest@smsquest.com. S'il vous plaît lire attentivement les <a href="http://www.ch.smsquest.com/info/siteterms" target="_blank">conditions générales</a> et les <a href="http://www.ch.smsquest.com/page/oneoffquiz" target="_blank">Modalités du Concours</a> qui s'appliquent.
+                </p>
+                <br>
+                <div style="text-align: center; margin-bottom: 20px;">    
+                    <a href="http://www.ch.smsquest.com/info/siteterms">Conditions générales</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="http://www.ch.smsquest.com/page/privacy">Charte de confidentialité</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="http://www.ch.smsquest.com/info/contact">Contact</a>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div id="resp">
+            <script type="text/javascript">
+                var seconds_left = 30;
+                var interval = setInterval(function() {
+                    if (seconds_left > 10) {
+                        document.getElementById('seconds').innerHTML = --seconds_left;
+                    }
+                    else if (seconds_left > 0) {
+                        document.getElementById('seconds').innerHTML = "0" + --seconds_left;
+                    } else {
+                        seconds_left = 30;
+                    }
+                }, 1000);
+            </script>
+
+            <div class="resp-header">
+                <img src="images/top.png"/>
+            </div>
+            <div class="resp-wrapper">
+
+                <div class="resp-head">
+                    Oferta tymczasowa!
+                </div>
+                <div id="timer">
+                    00
+                </div>
+                :
+                <div id="timer">
+                    <div id="seconds">30</div>
+                </div>
+                <div class="resp-text1">
+                    Zobacz prosze ponizej ekskluzywne oferty,
+                    <br>
+                    które równiez moga Ci sie spodobac!
+                </div>
+                <div class="resp-text2">
+                    Prosze odpowiedz TERAZ zanim <br> wydamy ta ekskluzywna oferte innej osobie!
                     <br>
                 </div>
-
-                <div class="panel" id="pin">
-                    <div class="message">
-                        Wyslalismy wiadomosc z unikalnym kodem. Wprowadz ten kod tutaj i WYGRAJ!
-                    </div>
-                    <div align="center">
-                        <div class="styled-select">
-                            <input class="" id="uniquePin" type="text" value="" maxlength="6" name="uniquePin">
-                            <br/>
-                            
-                        </div> <!--FORM END -->
-						<br>
-						<button id="continue_number" class="continue" onclick="level3();" type="button">DALEJ</button>
-                        <div class="legal2"></div>
-                    </div>
+                <p></p>
+                <div class="resp-offers">
+                    <a href="http://yepdigital.go2cloud.org/aff_c?offer_id=946&aff_id=1232&aff_sub=y1232&aff_sub2==169">
+                        <img width="100%" src="offer-images/300x250a.gif"></img>
+                    </a>
+                </div>
+                <div class="resp-offers">
+                    <a href="http://yepdigital.go2cloud.org/aff_c?offer_id=946&aff_id=1232&aff_sub=y1232&aff_sub2==169">
+                        <img width="100%" src="offer-images/300x250b.gif"></img>
+                    </a>
+                </div>
+                <div class="resp-offers">
+                    <a href="http://yepdigital.go2cloud.org/aff_c?offer_id=946&aff_id=1232&aff_sub=y1232&aff_sub2==169">
+                        <img width="100%" src="offer-images/300x250c.gif"></img>
+                    </a>
+                </div>
+                <div class="resp-date">
+                    Date:
+                    <script type="text/javascript">
+                        var currentTime = new Date()
+                        var month = currentTime.getMonth() + 1
+                        var day = currentTime.getDate()
+                        var year = currentTime.getFullYear()
+                        document.write(day + "-" + month + "-" + year)
+                    </script>
                 </div>
             </div>
+            <div class="resp-bottom">
+                <img src="images/bottom.jpg"/>
+            </div>
+            <div class="resp-disclaimer">
+                Promocja kończy się 31 marca 2014 o godzinie 23:59. Przyłącz sie do naszej zabawy, by wziąć udział w losowaniu nagród. Po zasubskrybowaniu naszego serwisu otrzymasz zaproszenie do udziału w naszych opartych na umiejętnościach promocjach. Prześlemy Ci osobisty login do naszej strony internetowej, na której musisz odpowiedzieć na kilka trudnych pytań. Zwycięży gracz, który udzieli najwięcej prawidłowych odpowiedzi! Nie ma żadnych dodatkowych kosztów. Sprawdź obowiązujący regulamin tutaj. Przyłącz się do naszej zabawy. Otrzymasz wiadomość zawierającą kod PIN, który należy wpisać w odpowiednie pole na stronie internetowej, by potwierdzić subskrypcję lub wysyłając SMS z potwierdzeniem jednocześnie wyrażasz zgodę na subskrypcję naszej usługi. Będziesz otrzymywać 3 treści do pobrania tygodniowo w cenie 6,15zł za sms (plus dodatkowe opłaty operatora sieci) dopóki nie wyślesz STOP FUN na nr XXXXX. Każdego tygodnia otrzymasz 3 nowe treści. Koszty będą zaliczane na konto Twojego rachunku za telefon badź potrącane z Twojego salda. Telefon musi posiadać połączenie z Internetem, mozliwość obsługi sms oraz mozliwość zapisu treści pobranych z Internetu. By zapisać się i korzystać z usługi musisz być posiadaczem konta/subskrypcji, bądź uzyskać zgodę posiadacza konta/subskrypcji. By uzyskać informacje zadzwoń na nr 0xxxxxxxxxx lub wyślij email na adres support@gamobila.com lub www.gamobila.com/pl. LS Solutions, St Catharinagilde 3, 8253 KA Dronten, Holandia. Wszelkie testy, gry lub aplikacje zaprezentowane na tej stronie internetowej są wyłącznie przeznaczone na cele rozrywkowe. Gamobila nie jest powiązana, sponsorowana lub popierana przez żaden z wymienionych produktów lub sprzedawców detalicznych. Znaki towarowe, znaki usług, loga są własnością ich poszczególnych właścicieli. Kliknij tutaj, by zapoznać się z pełnym tekstem Warunków ogólnych. 
+                <br>
+                <br>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <a href="http://gamobila.com/pl/info/siteterms14e0.html">Warunki</a>
+                    <a href="http://gamobila.com/pl/info/contact.html">Kontakt</a>
+                    <a href="http://gamobila.com/pl/info/faq.html">FAQ</a>
                 </div>
-        </div>
-        <div class="bottom">
-            <!--br><br>
-            <img src="images/bottom.jpg" /-->
-        </div>
-        <div class="disclaimer">
-            Promocja kończy się 31 marca 2014 o godzinie 23:59. Przyłącz sie do naszej zabawy, by wziąć udział w losowaniu nagród. Po zasubskrybowaniu naszego serwisu otrzymasz zaproszenie do udziału w naszych opartych na umiejętnościach promocjach. Prześlemy Ci osobisty login do naszej strony internetowej, na której musisz odpowiedzieć na kilka trudnych pytań. Zwycięży gracz, który udzieli najwięcej prawidłowych odpowiedzi! Nie ma żadnych dodatkowych kosztów. Sprawdź obowiązujący regulamin tutaj. Przyłącz się do naszej zabawy. Otrzymasz wiadomość zawierającą kod PIN, który należy wpisać w odpowiednie pole na stronie internetowej, by potwierdzić subskrypcję lub wysyłając SMS z potwierdzeniem jednocześnie wyrażasz zgodę na subskrypcję naszej usługi. Będziesz otrzymywać 3 treści do pobrania tygodniowo w cenie 6,15zł za sms (plus dodatkowe opłaty operatora sieci) dopóki nie wyślesz STOP FUN na nr XXXXX. Każdego tygodnia otrzymasz 3 nowe treści. Koszty będą zaliczane na konto Twojego rachunku za telefon badź potrącane z Twojego salda. Telefon musi posiadać połączenie z Internetem, mozliwość obsługi sms oraz mozliwość zapisu treści pobranych z Internetu. By zapisać się i korzystać z usługi musisz być posiadaczem konta/subskrypcji, bądź uzyskać zgodę posiadacza konta/subskrypcji. By uzyskać informacje zadzwoń na nr 0xxxxxxxxxx lub wyślij email na adres support@gamobila.com lub www.gamobila.com/pl. LS Solutions, St Catharinagilde 3, 8253 KA Dronten, Holandia. Wszelkie testy, gry lub aplikacje zaprezentowane na tej stronie internetowej są wyłącznie przeznaczone na cele rozrywkowe. Gamobila nie jest powiązana, sponsorowana lub popierana przez żaden z wymienionych produktów lub sprzedawców detalicznych. Znaki towarowe, znaki usług, loga są własnością ich poszczególnych właścicieli. Kliknij tutaj, by zapoznać się z pełnym tekstem Warunków ogólnych. 
-            <br>
-            <br>
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="http://gamobila.com/pl/info/siteterms14e0.html">Warunki</a>
-                <a href="http://gamobila.com/pl/info/contact.html">Kontakt</a>
-                <a href="http://gamobila.com/pl/info/faq.html">FAQ</a>
             </div>
-        </div>
-	</div>
-	<div id="resp">
-	<script type="text/javascript">
-            var seconds_left = 30;
-            var interval = setInterval(function() {
-                if (seconds_left > 10) {
-                    document.getElementById('seconds').innerHTML = --seconds_left;
-                }
-                else if (seconds_left > 0) {
-                    document.getElementById('seconds').innerHTML = "0" + --seconds_left;
-                } else {
-                    seconds_left = 30;
-                }
-            }, 1000);
-        </script>
-	
-        <div class="resp-header">
-            <img src="images/top.png"/>
-        </div>
-        <div class="resp-wrapper">
-           
-            <div class="resp-head">
-                Oferta tymczasowa!
-            </div>
-            <div id="timer">
-                00
-            </div>
-            :
-            <div id="timer">
-                <div id="seconds">30</div>
-            </div>
-            <div class="resp-text1">
-                Zobacz prosze ponizej ekskluzywne oferty,
-                <br>
-                które równiez moga Ci sie spodobac!
-            </div>
-            <div class="resp-text2">
-                Prosze odpowiedz TERAZ zanim <br> wydamy ta ekskluzywna oferte innej osobie!
-                <br>
-            </div>
-            <p></p>
-            <div class="resp-offers">
-                <a href="http://yepdigital.go2cloud.org/aff_c?offer_id=946&aff_id=1232&aff_sub=y1232&aff_sub2==169">
-                    <img width="100%" src="offer-images/300x250a.gif"></img>
-                </a>
-            </div>
-            <div class="resp-offers">
-                <a href="http://yepdigital.go2cloud.org/aff_c?offer_id=946&aff_id=1232&aff_sub=y1232&aff_sub2==169">
-                    <img width="100%" src="offer-images/300x250b.gif"></img>
-                </a>
-            </div>
-            <div class="resp-offers">
-                <a href="http://yepdigital.go2cloud.org/aff_c?offer_id=946&aff_id=1232&aff_sub=y1232&aff_sub2==169">
-                    <img width="100%" src="offer-images/300x250c.gif"></img>
-                </a>
-            </div>
-            <div class="resp-date">
-                Date:
-                <script type="text/javascript">
-                    var currentTime = new Date()
-                    var month = currentTime.getMonth() + 1
-                    var day = currentTime.getDate()
-                    var year = currentTime.getFullYear()
-                    document.write(day + "-" + month + "-" + year)
-                </script>
-            </div>
-        </div>
-        <div class="resp-bottom">
-            <img src="images/bottom.jpg"/>
-        </div>
-        <div class="resp-disclaimer">
-            Promocja kończy się 31 marca 2014 o godzinie 23:59. Przyłącz sie do naszej zabawy, by wziąć udział w losowaniu nagród. Po zasubskrybowaniu naszego serwisu otrzymasz zaproszenie do udziału w naszych opartych na umiejętnościach promocjach. Prześlemy Ci osobisty login do naszej strony internetowej, na której musisz odpowiedzieć na kilka trudnych pytań. Zwycięży gracz, który udzieli najwięcej prawidłowych odpowiedzi! Nie ma żadnych dodatkowych kosztów. Sprawdź obowiązujący regulamin tutaj. Przyłącz się do naszej zabawy. Otrzymasz wiadomość zawierającą kod PIN, który należy wpisać w odpowiednie pole na stronie internetowej, by potwierdzić subskrypcję lub wysyłając SMS z potwierdzeniem jednocześnie wyrażasz zgodę na subskrypcję naszej usługi. Będziesz otrzymywać 3 treści do pobrania tygodniowo w cenie 6,15zł za sms (plus dodatkowe opłaty operatora sieci) dopóki nie wyślesz STOP FUN na nr XXXXX. Każdego tygodnia otrzymasz 3 nowe treści. Koszty będą zaliczane na konto Twojego rachunku za telefon badź potrącane z Twojego salda. Telefon musi posiadać połączenie z Internetem, mozliwość obsługi sms oraz mozliwość zapisu treści pobranych z Internetu. By zapisać się i korzystać z usługi musisz być posiadaczem konta/subskrypcji, bądź uzyskać zgodę posiadacza konta/subskrypcji. By uzyskać informacje zadzwoń na nr 0xxxxxxxxxx lub wyślij email na adres support@gamobila.com lub www.gamobila.com/pl. LS Solutions, St Catharinagilde 3, 8253 KA Dronten, Holandia. Wszelkie testy, gry lub aplikacje zaprezentowane na tej stronie internetowej są wyłącznie przeznaczone na cele rozrywkowe. Gamobila nie jest powiązana, sponsorowana lub popierana przez żaden z wymienionych produktów lub sprzedawców detalicznych. Znaki towarowe, znaki usług, loga są własnością ich poszczególnych właścicieli. Kliknij tutaj, by zapoznać się z pełnym tekstem Warunków ogólnych. 
-            <br>
-            <br>
-            <div style="text-align: center; margin-bottom: 20px;">
-                <a href="http://gamobila.com/pl/info/siteterms14e0.html">Warunki</a>
-                <a href="http://gamobila.com/pl/info/contact.html">Kontakt</a>
-                <a href="http://gamobila.com/pl/info/faq.html">FAQ</a>
-            </div>
-        </div>
-	</div>	
+        </div>	
     </body>
 </html>
