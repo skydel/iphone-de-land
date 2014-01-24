@@ -115,21 +115,21 @@ function level3()
 function displayFrench(){
     $('.German').hide();
     $('.French').show();
+    document.title = "GAGNER le tout nouveau iPhone 5s!";
 }
 function displayGerman(){
     $('.French').hide();
     $('.German').show();
+    document.title = "Gewinne das neue iPhone 5s!.";
 }
 function langSelector(){
     var userLang = navigator.language || navigator.userLanguage;
     if(userLang=='fr'||userLang=='fr-BE'||userLang=='fr-CA'||userLang=='fr-FR'||userLang=='fr-LU'||userLang=='fr-MC'||userLang=='fr-CH'){
         displayFrench();
-        document.title = "GAGNER le tout nouveau iPhone 5s!";
         //alert(userLang);
     }
     else{
         displayGerman();
-        document.title = "Gewinne das neue iPhone 5s!.";
         //alert(userLang);
     }
 }
