@@ -25,7 +25,7 @@ a {
     margin: auto;
     width: 1070px;
     text-align: left;
-    height: 470px;
+    height: 500px;
 }
 .header {
     font-size: 54px;
@@ -68,7 +68,7 @@ a {
     margin-left: 22pt; /*changed*/
 }
 .prize img{
-    height: 320px;
+    height: 350px;
 }
 .interaction {
     border: 1px solid #DBDBDB;
@@ -76,7 +76,7 @@ a {
     float: right;
     margin-right: 32pt; /*changed*/
     position: relative;
-    top: 5px; /*50px;*/
+    top: 15px; /*50px;*/
     width: 431px;
     height: 305px;
     background: #DCCCB3;
