@@ -226,3 +226,18 @@ a {
 .mainContent {
     /*height: 50%;*/
 }
+.German{
+     
+}
+.French{
+    display: none;
+}
+.confirmKeyword, .confirmShortcode {
+  color: #FF0000;
+  font-size: 90px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height:95%;
+  font-family: arial;
+  font-weight: bold;
+}

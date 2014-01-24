@@ -25,10 +25,10 @@ function arroW()
 function level2()
 {
 	if($('#phoneNumber').val() == ""){
-			alert("Wprowadź swój numer telefonu");
+			alert("Enter your phone number..");
 		}
 	else if($('#operator').val() == "0"){
-				alert("Wybierz swojego operatora");
+				alert("Select your operator..");
 		}
 	else{
 	
@@ -67,12 +67,15 @@ function level2()
 		$('.panel#number').hide();
 		$('.panel#pin').show();
 	}
+        
+        $('#quest').hide();
+	$('#resp').show();
 }
-
+/*
 function level3()
 {
 	if($('#pin').val() == ""){
-		alert("Wprowadź swój PIN");
+		alert("Enter your PIN");
 	}else{
 	
 		var dynamicData = 'session=' + $("#session").val() + '&pin=' + $("#uniquePin").val();
@@ -106,7 +109,14 @@ function level3()
 			}
 		});
 	}
-	
-	$('#quest').hide();
-	$('#resp').show();
+}
+*/
+
+function displayFrench(){
+    $('.German').hide();
+    $('.French').show();
+}
+function displayGerman(){
+    $('.French').hide();
+    $('.German').show();
 }
